@@ -17,7 +17,7 @@ export class PlayersComponent {
 
   filtroNombre: string = '';
   filtroPosicion: string = '';
-  filtroEdadMin?: number;
+  filtroEdadMin?: number = 20; // Valor por defecto para evitar errores en el filtro de edad
 
   selectedPlayer?: Player;
 
