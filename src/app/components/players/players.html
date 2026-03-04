@@ -1,0 +1,44 @@
+<section class="players">
+  <header class="players__header">
+    <h2>Equipo Basket - Jugadoras</h2>
+
+    <div class="players__filters">
+      <input
+        type="text"
+        placeholder="Buscar por nombre..."
+        [(ngModel)]="filtroNombre"
+      />
+
+      <select [(ngModel)]="filtroPosicion">
+        <option value="">Todas las posiciones</option>
+        <option value="Base">Base</option>
+        <option value="Escolta">Escolta</option>
+        <option value="Alero">Alero</option>
+        <option value="Ala-pívot">Ala-pívot</option>
+        <option value="Pívot">Pívot</option>
+      </select>
+
+      <input
+        type="number"
+        min="0"
+        placeholder="Edad mínima"
+        [(ngModel)]="filtroEdadMin"
+      />
+    </div>
+  </header>
+
+  <ul class="players__list">
+    <li
+      *ngFor="let player of playersFiltrados"
+      class="players__item"
+      (click)="seleccionarPlayer(player)"
+    >
+      <h3>{{ player.nombre }} {{ player.apellidos }}</h3>
+      <p>{{ player.posicion }} · {{ player.edad }} años · {{ player.altura }} cm</p>
+    </li>
+  </ul>
+
+  <p *ngIf="playersFiltrados.length === 0">
+    No se han encontrado jugadores con ese filtro.
+  </p>
+</section>
