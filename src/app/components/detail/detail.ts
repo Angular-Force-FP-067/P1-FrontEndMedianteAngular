@@ -1,4 +1,4 @@
-import { Component, Input } from '@angular/core'; 
+import { Component, Input } from '@angular/core';
 import { CommonModule } from '@angular/common';
 
 @Component({
@@ -6,8 +6,8 @@ import { CommonModule } from '@angular/common';
   standalone: true,
   imports: [CommonModule],
   templateUrl: './detail.html',
-  styleUrl: './detail.css'
+  styleUrls: ['./detail.css']
 })
 export class DetailComponent {
-  @Input() jugador: any = null;
+  @Input() jugador: any;
 }
