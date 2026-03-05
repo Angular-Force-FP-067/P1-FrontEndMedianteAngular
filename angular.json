@@ -25,7 +25,10 @@
               }
             ],
             "styles": [
+<<<<<<< HEAD
               "node_modules/bootstrap/dist/css/bootstrap.min.css",
+=======
+>>>>>>> 380690c6f4d5c3eaa9838ff6fc5fb61f686f3dac
               "src/styles.css"
             ]
           },
