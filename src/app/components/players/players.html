@@ -1,0 +1,105 @@
+<section class="players">
+  <header class="players_header">
+
+    <!-- Título + Subtítulo -->
+    <h2>Plantilla del Equipo</h2>
+    <h4>Conoce a nuestros jugadores profesionales</h4>
+
+    <!-- Caja filtrado -->
+    <div class="players_box">
+    <p>
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 640 640" class="filter-icon">
+        <path d="M96 128C83.1 128 71.4 135.8 66.4 147.8C61.4 159.8 64.2 173.5 73.4 182.6L256 365.3L256 480C256 488.5 259.4 496.6 265.4 502.6L329.4 566.6C338.6 575.8 352.3 578.5 364.3 573.5C376.3 568.5 384 556.9 384 544L384 365.3L566.6 182.7C575.8 173.5 578.5 159.8 573.5 147.8C568.5 135.8 556.9 128 544 128L96 128z"/>
+      </svg>
+      Filtrar Jugadores
+    </p>
+
+      <div class="players_filters">
+        <!-- Filtrado por nombre -->
+           <div class="search-input">
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                viewBox="0 0 24 24"
+                class="search-icon">
+                <path d="M10 2a8 8 0 105.293 14.293l4.707 4.707 1.414-1.414-4.707-4.707A8 8 0 0010 2zm0 2a6 6 0 110 12 6 6 0 010-12z"/>
+              </svg>
+
+              <input type="text" placeholder="Buscar por nombre..." [(ngModel)]="filtroNombre" />
+            </div>
+        <!-- Filtrado por posición -->
+        <select [(ngModel)]="filtroPosicion">
+          <option value="">Todas las posiciones</option>
+          <option value="Base">Base</option>
+          <option value="Escolta">Escolta</option>
+          <option value="Alero">Alero</option>
+          <option value="Ala-pívot">Ala-pívot</option>
+          <option value="Pívot">Pívot</option>
+        </select>
+        <!-- Filtrado por edad -->
+        <div class="age-slider">
+          <label>Edades: {{ filtroEdadMin}}</label>
+          <input
+            type="range"
+            min="20"
+            max="35"
+            [(ngModel)]="filtroEdadMin"
+          />
+        </div>
+      </div>
+    </div>
+  </header>
+
+<!-- Lista de Jugadores -->
+ <ul class="players_list">
+  <li *ngFor="let player of playersFiltrados"
+      class="players_item"
+      [class.selected]="player === selectedPlayer"
+      (click)="seleccionarPlayer(player)">
+    
+      <!-- IMG + Número Jersey -->
+      <div class="player-card">
+        <div class="player-img-wrapper">
+          <img [src]="player.imagen" alt="{{ player.nombre }}" class="player-img"/>
+          
+          <div class="jersey-number">#{{ player.numejersey }}</div>
+      </div>
+      <!-- Noombre + Apellids-->
+      <div class="player-info">
+        <h3>{{ player.nombre }}</h3>
+        <p>{{ player.apellidos }}</p>
+      <!-- Posición + Edad-->
+        <div class="player-meta">
+          <span class="player-position"
+            [ngClass]="'pos-' + player.posicion.toLowerCase().replace('í','i')">
+            {{ player.posicion }}
+          </span>
+          <span class="player-age">
+            {{ player.edad }} años
+          </span>
+        </div>
+      <!-- Separador-->
+        <div class="divider"></div>
+      <!-- Estádisticas -->
+        <div class="player-stats">
+          <div class="stat">
+            <span class="stat-number">{{ player.PPP }}</span>
+            <span>PPP</span>
+          </div>
+          <div class="stat">
+            <span class="stat-number">{{ player.APP }}</span>
+            <span>APP</span>
+          </div>
+          <div class="stat">
+            <span class="stat-number">{{ player.RPP }}</span>
+            <span>RPP</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </li>
+</ul>
+
+  <p *ngIf="playersFiltrados.length === 0">
+    No se han encontrado jugadores con ese filtro.
+  </p>
+</section>
