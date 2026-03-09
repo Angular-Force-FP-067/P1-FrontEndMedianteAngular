@@ -15,3 +15,10 @@
 </div>
 
 <router-outlet></router-outlet>
+<h1>Equipo de Basket</h1>
+
+<app-media
+  [titulo]="'Vídeo de ' + jugadorSeleccionado.nombre"
+  [videoUrl]="jugadorSeleccionado.video"
+>
+</app-media>
