@@ -1,5 +1,10 @@
 import { Component } from '@angular/core';
 import { RouterOutlet } from '@angular/router';
+import { PlayersComponent } from './components/players/players';
+
+@Component({
+  selector: 'app-root',
+  imports: [RouterOutlet, PlayersComponent],
 import { DetailComponent } from './components/detail/detail';
 
 @Component({
