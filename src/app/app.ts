@@ -1,5 +1,12 @@
 import { Component } from '@angular/core';
 import { RouterOutlet } from '@angular/router';
+import { HeaderComponent } from './shared/header/header.component';
+import { FooterComponent } from './shared/footer/footer.component';
+
+@Component({
+  selector: 'app-root',
+  standalone: true,
+  imports: [RouterOutlet, HeaderComponent, FooterComponent],
 import { PlayersComponent } from './components/players/players';
 
 @Component({
@@ -34,6 +41,7 @@ export class AppComponent {
 }
 export class App {
   protected readonly title = signal('equipo-basket');
+}
   jugadorSeleccionado = {
     nombre: 'Lebron James',
     video: 'assets/videos/jugador01.mp4'
