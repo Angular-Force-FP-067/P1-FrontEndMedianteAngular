@@ -1,1 +1,8 @@
-<p>media works!</p>
+<div class="media-card">
+  <h3>{{ titulo }}</h3>
+
+  <video controls width="100%">
+    <source [src]="videoUrl" type="video/mp4" />
+    Tu navegador no soporta vídeo HTML5.
+  </video>
+</div>
