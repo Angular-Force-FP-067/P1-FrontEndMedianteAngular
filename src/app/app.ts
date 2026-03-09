@@ -2,27 +2,21 @@ import { Component } from '@angular/core';
 import { RouterOutlet } from '@angular/router';
 import { HeaderComponent } from './shared/header/header.component';
 import { FooterComponent } from './shared/footer/footer.component';
-
-@Component({
-  selector: 'app-root',
-  standalone: true,
-  imports: [RouterOutlet, HeaderComponent, FooterComponent],
 import { PlayersComponent } from './components/players/players';
-
-@Component({
-  selector: 'app-root',
-  imports: [RouterOutlet, PlayersComponent],
 import { DetailComponent } from './components/detail/detail';
-
-@Component({
-  selector: 'app-root',
-  standalone: true,
-  imports: [RouterOutlet, DetailComponent],
 import { Media } from './components/media/media';
 
 @Component({
   selector: 'app-root',
-  imports: [RouterOutlet, Media],
+  standalone: true,
+  imports: [
+  RouterOutlet,
+  HeaderComponent,
+  FooterComponent,
+  PlayersComponent,
+  DetailComponent,
+  Media
+],
   templateUrl: './app.html',
   styleUrls: ['./app.css']
 })
@@ -36,14 +30,7 @@ export class AppComponent {
     posicion: 'Pívot',
     altura: '2.16',
     edad: 43,
-    foto: 'PauGasol2.avif'
-  };
-}
-export class App {
-  protected readonly title = signal('equipo-basket');
-}
-  jugadorSeleccionado = {
-    nombre: 'Lebron James',
+    foto: 'PauGasol2.avif',
     video: 'assets/videos/jugador01.mp4'
   };
 }
