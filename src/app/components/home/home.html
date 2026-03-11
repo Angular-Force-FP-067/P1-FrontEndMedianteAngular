@@ -1,0 +1,20 @@
+<div class="container mt-4">
+  <h1 class="text-center mb-5">🏀 {{ title }}</h1>
+
+  <div class="row justify-content-center">
+    <div class="col-md-7">
+      <div class="p-4 border rounded bg-light shadow-sm text-center">
+        <p class="text-muted">Aquí irá el listado de jugadores...</p>
+      </div>
+    </div>
+
+    <div class="col-md-5">
+      <app-detail [jugador]="jugadorSeleccionado"></app-detail>
+    </div>
+  </div>
+</div>
+
+<app-media
+  [titulo]="'Vídeo de ' + jugadorSeleccionado.nombre"
+  [videoUrl]="jugadorSeleccionado.video">
+</app-media>
