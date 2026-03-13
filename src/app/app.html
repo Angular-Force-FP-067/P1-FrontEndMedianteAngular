@@ -1,26 +1,5 @@
 <app-header></app-header>
 
-<div class="container mt-4">
-  <h1 class="text-center mb-5">🏀 {{ title }}</h1>
-  <app-players></app-players>
-  <div class="media-grid">
-    <app-media
-      [titulo]="'Highlight de ' + jugadorSeleccionado.nombre"
-      [videoUrl]="jugadorSeleccionado.video"
-    >
-    </app-media>
-    <app-media
-      [titulo]="'Highlight de ' + jugadorSeleccionado.nombre"
-      [videoUrl]="jugadorSeleccionado.video"
-    >
-    </app-media>
-    <app-media
-      [titulo]="'Highlight de ' + jugadorSeleccionado.nombre"
-      [videoUrl]="jugadorSeleccionado.video"
-    >
-    </app-media>
-  </div>
-</div>
 <main class="container main">
   <router-outlet></router-outlet>
 </main>
