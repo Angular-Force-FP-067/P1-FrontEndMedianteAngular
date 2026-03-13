@@ -4,12 +4,12 @@ import { CommonModule } from '@angular/common';
 import { Player } from '../../models/players';
 import { PLAYERS } from '../../data/players';
 import { DetailComponent } from '../detail/detail';
-import { Media } from '../media/media'; 
+import { MediaComponent } from '../media/media'; 
 
 @Component({
   selector: 'app-players',
   standalone: true,
-  imports: [FormsModule, CommonModule, DetailComponent, Media], 
+  imports: [FormsModule, CommonModule, DetailComponent, MediaComponent], 
   templateUrl: './players.html',
   styleUrls: ['./players.css']
 })
