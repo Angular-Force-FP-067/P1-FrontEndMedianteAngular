@@ -1,13 +1,21 @@
 import { Component } from '@angular/core';
 import { Router, RouterOutlet, NavigationEnd } from '@angular/router';
 import { filter } from 'rxjs';
+import { NgIf } from '@angular/common';
 import { HeaderComponent } from './shared/header/header.component';
 import { FooterComponent } from './shared/footer/footer.component';
+import { LandingBannerComponent } from './shared/landing-banner/landing-banner.component';
 
 @Component({
   selector: 'app-root',
   standalone: true,
-  imports: [RouterOutlet, HeaderComponent, FooterComponent],
+  imports: [
+    RouterOutlet,
+    NgIf,
+    HeaderComponent,
+    FooterComponent,
+    LandingBannerComponent
+  ],
   templateUrl: './app.html',
   styleUrls: ['./app.css']
 })
