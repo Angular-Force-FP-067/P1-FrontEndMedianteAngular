@@ -31,6 +31,6 @@ export class AppComponent {
     altura: '2.16',
     edad: 43,
     foto: 'PauGasol2.avif',
-    video: 'assets/videos/jugador01.mp4'
+    video: 'media/players/003/highlight.mp4'
   };
 }
