@@ -15,4 +15,16 @@ import { FooterComponent } from './shared/footer/footer.component';
   styleUrls: ['./app.css']
 })
 export class AppComponent {
+  title = 'Equipo Basket';
+  subtitle = 'Plantilla 2026';
+
+  jugadorSeleccionado = {
+    nombre: 'Pau',
+    apellidos: 'Gasol',
+    posicion: 'Pívot',
+    altura: '2.16',
+    edad: 43,
+    foto: 'PauGasol2.avif',
+    video: 'media/players/003/highlight.mp4'
+  };
 }
