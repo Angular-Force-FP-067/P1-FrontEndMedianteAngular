@@ -1,6 +1,8 @@
 <app-header></app-header>
 
-<main class="container main" [class.main--landing]="isLanding">
+<app-landing-banner *ngIf="isLanding"></app-landing-banner>
+
+<main class="container main">
   <router-outlet></router-outlet>
 </main>
 
