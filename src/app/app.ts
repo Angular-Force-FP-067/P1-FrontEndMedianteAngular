@@ -2,21 +2,15 @@ import { Component } from '@angular/core';
 import { RouterOutlet } from '@angular/router';
 import { HeaderComponent } from './shared/header/header.component';
 import { FooterComponent } from './shared/footer/footer.component';
-import { PlayersComponent } from './components/players/players';
-import { DetailComponent } from './components/detail/detail';
-import { Media } from './components/media/media';
 
 @Component({
   selector: 'app-root',
   standalone: true,
   imports: [
-  RouterOutlet,
-  HeaderComponent,
-  FooterComponent,
-  PlayersComponent,
-  DetailComponent,
-  Media
-],
+    RouterOutlet,
+    HeaderComponent,
+    FooterComponent
+  ],
   templateUrl: './app.html',
   styleUrls: ['./app.css']
 })

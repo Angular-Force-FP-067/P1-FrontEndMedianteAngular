@@ -1,13 +1,15 @@
 import { Component } from '@angular/core';
-import { FormsModule } from '@angular/forms'
+import { FormsModule } from '@angular/forms';
 import { CommonModule } from '@angular/common';
 import { Player } from '../../models/players';
 import { PLAYERS } from '../../data/players';
+import { DetailComponent } from '../detail/detail';
+import { Media } from '../media/media'; 
 
 @Component({
   selector: 'app-players',
-  standalone: true,            // 👈 debe estar
-  imports: [FormsModule, CommonModule],      // 👈 añadir esto
+  standalone: true,
+  imports: [FormsModule, CommonModule, DetailComponent, Media], 
   templateUrl: './players.html',
   styleUrls: ['./players.css']
 })
@@ -17,9 +19,10 @@ export class PlayersComponent {
 
   filtroNombre: string = '';
   filtroPosicion: string = '';
-  filtroEdadMin?: number = 20; // Valor por defecto para evitar errores en el filtro de edad
+  filtroEdadMin?: number = 20;
 
-  selectedPlayer?: Player;
+  // 1. Inicializamos explícitamente como undefined
+  selectedPlayer: Player | undefined = undefined;
 
   get playersFiltrados(): Player[] {
     return this.players.filter(player => {
@@ -41,8 +44,8 @@ export class PlayersComponent {
     });
   }
 
+  // 2. Método para asignar el jugador
   seleccionarPlayer(player: Player): void {
     this.selectedPlayer = player;
-    // Más adelante aquí emitirás el evento al DetailComponent, etc.
   }
 }
