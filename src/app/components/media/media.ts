@@ -7,7 +7,7 @@ import { Component, Input } from '@angular/core';
   templateUrl: './media.html',
   styleUrls: ['./media.css'],
 })
-export class Media {
+export class MediaComponent {
   @Input() videoUrl: string = '';
   @Input() titulo: string = '';
 }
