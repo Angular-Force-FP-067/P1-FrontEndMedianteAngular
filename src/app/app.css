@@ -3,6 +3,10 @@
   min-height: calc(100vh - 60px - 56px);
 }
 
+.main--landing {
+  overflow-x: clip;
+}
+
 .media-grid {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
