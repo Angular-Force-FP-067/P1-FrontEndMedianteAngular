@@ -1,15 +1,17 @@
-/** Estilos para el componente PlayersComponent */
+/** Estilos para el componente PlayersComponent **/
 .players {
   padding: 1rem;
 }
+
 /* Estilos para el encabezado del componente */
 .players_header {
   display: flex;
   flex-direction: column;
   gap: 0.5rem;
 }
+
 /* Caja de filtros */
-.players_box{
+.players_box {
   padding: 0.75rem 1rem;
   display: flex;
   flex-direction: column;
@@ -17,18 +19,21 @@
   border-radius: 6px;
   border: 1px solid #ddd;
 }
+
 .filter-icon {
   width: 20px;
   height: 20px;
   margin-left: 0.5rem;
-  vertical-align: uppercase;
+  vertical-align: middle;
 }
+
 /* Contenedor de filtros */
 .players_filters {
   display: flex;
   flex-wrap: wrap;
   gap: 1rem;
 }
+
 .players_filters input, .players_filters select, .search-input input {
   padding: 0.5rem 0.75rem;
   border: 2px solid #E9E9E9;
@@ -36,15 +41,18 @@
   border-radius: 6px;
   font-size: 0.95rem;
   outline: none;
-  transition: border-color 0.2s, box-shadow 0.2s; /* efecto al enfocar */
+  transition: border-color 0.2s, box-shadow 0.2s;
 }
+
 .players_filters input:focus, .players_filters select:focus {
-  border-color: #FF4400;      /* azul más oscuro */
+  border-color: #FF4400;
   box-shadow: 0 0 5px rgba(255,68,0,0.5);
 }
+
 .players_filters input::placeholder {
   color: #999;
 }
+
 .players_filters input[type="text"], .players_filters select, .players_filters input[type="number"] {
   flex: 1;
   min-width: 180px;
@@ -53,22 +61,24 @@
 .players_filters input, .players_filters select, .search-input input {
   height: 56px;
 }
-/*Contenedor del filtro buscar por nombre*/
+
+/* Contenedor del filtro buscar por nombre */
 .search-input {
   position: relative;
   flex: 1;
 }
-/* Input */
+
 .search-input input {
   width: 100%;
   box-sizing: border-box;
-  padding: 0.5rem 0.75rem 0.5rem 2.2rem; /* espacio izquierda para la lupa */
+  padding: 0.5rem 0.75rem 0.5rem 2.2rem;
   border: 2px solid #E9E9E9;
   border-radius: 6px;
   outline: none;
   font-size: 0.95rem;
   transition: border-color 0.2s, box-shadow 0.2s;
 }
+
 .search-icon {
   position: absolute;
   left: 0.6rem;
@@ -79,6 +89,7 @@
   fill: #999;
   pointer-events: none;
 }
+
 /* Slider de edad */
 .age-slider {
   padding: 0.5rem 0.75rem;
@@ -90,11 +101,13 @@
   flex-direction: column;
   gap: 0.25rem;
 }
+
 .age-slider label {
   font-size: 0.85rem;
   margin-bottom: 0.25rem;
   color: #999;
 }
+
 .age-slider input[type="range"] {
   -webkit-appearance: none;
   width: 100%;
@@ -103,36 +116,37 @@
   background: #ffffff;
   outline: none;
   cursor: pointer;
-  display: block;    /* importante */
-  margin: 0;         /* eliminar margenes extra */
+  display: block;
+  margin: 0;
   padding: 0;
   position: relative;
 }
+
 .age-slider input[type="range"]::-webkit-slider-thumb {
   -webkit-appearance: none;
   appearance: none;
   width: 20px;
   height: 20px;
   border-radius: 50%;
-  background:#FF4400;
+  background: #FF4400;
   cursor: pointer;
   transition: background 0.2s;
   box-sizing: border-box;
 }
+
 .age-slider input[type="range"]::-webkit-slider-thumb:hover {
   background: #2077F9;
 }
-/* Para Firefox */
+
 .age-slider input[type="range"]::-moz-range-thumb {
-  -webkit-appearance: none;
-  appearance: none;
   width: 20px;
   height: 20px;
   border-radius: 50%;
-  background:#FF4400;
+  background: #FF4400;
   cursor: pointer;
   transition: background 0.2s;
 }
+
 /* Lista de jugadores */
 .players_list {
   list-style: none;
@@ -142,10 +156,12 @@
   grid-template-columns: repeat(auto-fill, minmax(260px, 1fr));
   gap: 1.5rem;
 }
+
 .players_item {
   list-style: none;
   cursor: pointer;
 }
+
 .player-card {
   background: white;
   border-radius: 12px;
@@ -153,22 +169,27 @@
   overflow: hidden;
   transition: transform 0.2s ease, box-shadow 0.2s ease;
 }
+
 .player-card:hover {
   transform: translateY(-4px);
   box-shadow: 0 8px 20px rgba(0,0,0,0.12);
 }
+
 .players_item.selected .player-card {
   border: 2px solid #FF4400;
 }
+
 /* Imagen del jugador + Número Jersey */
 .player-img {
   width: 100%;
   height: 220px;
   object-fit: cover;
 }
+
 .player-img-wrapper {
   position: relative;
 }
+
 .jersey-number {
   position: absolute;
   top: 12px;
@@ -180,25 +201,30 @@
   font-weight: 700;
   font-size: 0.9rem;
 }
-/*Nombre + Apellidos*/
+
+/* Nombre + Apellidos */
 .player-meta {
   display: flex;
   justify-content: space-between;
   align-items: center;
 }
+
 .player-info {
   padding: 1rem;
 }
+
 .player-info h3 {
   margin: 0 0 0.5rem;
   font-size: 1.1rem;
 }
+
 .player-info p {
   margin: 0.5rem 0 0;
   color: #666;
   font-size: 0.9rem;
   padding: 0.20rem;
 }
+
 /* Posición + Edad */
 .player-position {
   display: inline-block;
@@ -209,22 +235,26 @@
   color: white;
   margin-bottom: 0.5rem;
 }
+
 .player-age {
   font-size: 0.9rem;
   color: #666;
 }
+
 /* Colores por posición */
-.pos-base {background-color:#2077F9;}
-.pos-escolta { background-color:#005D06;}
-.pos-alero { background-color: #F1ACFF; color: #222222;}
-.pos-ala-pivot { background-color: #FCFFAC; color: #222222;}
-.pos-pivot {background-color: #dc3545;}
+.pos-base { background-color: #2077F9; }
+.pos-escolta { background-color: #005D06; }
+.pos-alero { background-color: #F1ACFF; color: #222222; }
+.pos-ala-pivot { background-color: #FCFFAC; color: #222222; }
+.pos-pivot { background-color: #dc3545; }
+
 /* Separador */
 .divider {
   height: 1px;
   background-color: #e5e5e5;
   margin: 0.75rem 0;
 }
+
 /* Estadísticas */
 .player-stats {
   display: grid;
@@ -232,9 +262,23 @@
   text-align: center;
   margin-top: 0.5rem;
 }
+
 .stat-number {
   display: block;
   font-weight: 700;
   color: #FF4400;
   font-size: 1.1rem;
+}
+
+.detail-container:not(:has(app-detail)) {
+  display: none;
+  margin: 0;
+  padding: 0;
+}
+
+/* Solo aplicamos el margen cuando el contenedor SÍ tiene contenido */
+.detail-container:has(app-detail) {
+  display: flex;
+  justify-content: center;
+  margin-top: 1.5rem; /* Esto reemplaza al mt-4 de Bootstrap */
 }
