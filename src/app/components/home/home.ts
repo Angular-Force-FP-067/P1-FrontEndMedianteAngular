@@ -1,14 +1,14 @@
 import { Component } from '@angular/core';
-import { PlayersComponent } from '../players/players';
+import { RouterModule } from '@angular/router';
 
 @Component({
   selector: 'app-home',
   standalone: true,
-  imports: [PlayersComponent],
+  imports: [RouterModule],
   templateUrl: './home.html',
   styleUrls: ['./home.css']
 })
 export class HomeComponent {
   title = 'Equipo Basket';
-  subtitle = 'Plantilla 2026';
+  subtitle = 'Angular Force';
 }
