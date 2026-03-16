@@ -38,7 +38,7 @@
   </header>
 
   <ul class="players_list">
-    <li *ngFor="let player of playersFiltrados"
+    <li *ngFor="let player of players | filtroPlayers:filtroNombre:filtroPosicion:filtroEdadMin"
         class="players_item"
         [class.selected]="player === selectedPlayer"
         (click)="seleccionarPlayer(player)">
@@ -97,7 +97,7 @@
     </app-media>
   </div>
 
-  <p *ngIf="playersFiltrados.length === 0" class="text-center mt-4">
+  <p *ngIf="(players | filtroPlayers:filtroNombre:filtroPosicion:filtroEdadMin).length === 0" class="text-center mt-4">
     No se han encontrado jugadores con ese filtro.
   </p>
 </section>
