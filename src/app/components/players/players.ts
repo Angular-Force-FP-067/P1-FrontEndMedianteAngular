@@ -4,13 +4,14 @@ import { CommonModule } from '@angular/common';
 import { Player } from '../../models/players';
 import { PLAYERS } from '../../data/players';
 import { DetailComponent } from '../detail/detail';
-import { MediaComponent } from '../media/media'; 
+import { MediaComponent } from '../media/media';
+import { RouterModule } from '@angular/router';
 import { FiltroPlayersPipe } from '../../pipes/filtro-players.pipe';
 
 @Component({
   selector: 'app-players',
   standalone: true,
-  imports: [FormsModule, CommonModule, DetailComponent, MediaComponent, FiltroPlayersPipe], 
+  imports: [FormsModule, CommonModule, DetailComponent, MediaComponent, FiltroPlayersPipe, RouterModule], 
   templateUrl: './players.html',
   styleUrls: ['./players.css']
 })

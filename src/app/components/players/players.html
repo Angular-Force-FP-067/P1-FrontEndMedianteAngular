@@ -38,10 +38,11 @@
   </header>
 
   <ul class="players_list">
-    <li *ngFor="let player of players | filtroPlayers:filtroNombre:filtroPosicion:filtroEdadMin"
-        class="players_item"
-        [class.selected]="player === selectedPlayer"
-        (click)="seleccionarPlayer(player)">
+  <li *ngFor="let player of players | filtroPlayers:filtroNombre:filtroPosicion:filtroEdadMin"
+    class="players_item"
+    [class.selected]="player === selectedPlayer"
+    (click)="seleccionarPlayer(player)"
+    [routerLink]="['/players', player.id]">
       
       <div class="player-card">
         <div class="player-img-wrapper">
