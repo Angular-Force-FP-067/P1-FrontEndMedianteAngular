@@ -1,4 +1,4 @@
-<div *ngIf="jugador; else noPlayer">
+<div *ngIf="jugador">
   <div class="card shadow-sm mb-3" style="max-width: 22rem; margin: 0 auto;">
     <img [src]="jugador.imagen" class="card-img-top" [alt]="jugador.nombre"
          style="height: 250px; object-fit: cover;">
@@ -29,18 +29,8 @@
     <p class="small text-muted">{{ jugador.biografia }}</p>
   </div>
 
-  <div *ngIf="jugador.videoURL && jugador.videoURL !== 'X'" class="video-wrapper">
-    <h6>Vídeo</h6>
-    <video width="100%" controls>
-      <source [src]="jugador.videoURL" type="video/mp4">
-      Tu navegador no soporta reproducción de vídeo.
-    </video>
-  </div>
-
 </div>
 
-<ng-template #noPlayer>
-  <div class="alert alert-info">
-    Selecciona un jugador para ver sus detalles.
-  </div>
-</ng-template>
+<div *ngIf="!jugador" class="alert alert-info">
+  Selecciona un jugador para ver sus detalles.
+</div>
