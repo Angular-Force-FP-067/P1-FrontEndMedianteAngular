@@ -89,15 +89,6 @@
     <app-detail [jugador]="selectedPlayer"></app-detail>
   </div>
 
-  <!-- Mostrar siempre el componente media debajo del detalle.
-       Si el jugador seleccionado tiene vídeo válido lo usamos, si no usamos el vídeo por defecto. -->
-  <div class="media-area mt-3">
-    <app-media
-      [titulo]="(selectedPlayer && selectedPlayer.videoURL && selectedPlayer.videoURL !== 'X') ? ('Vídeo de ' + selectedPlayer.nombre) : 'Vídeo de presentación'"
-      [videoUrl]="(selectedPlayer && selectedPlayer.videoURL && selectedPlayer.videoURL !== 'X') ? selectedPlayer.videoURL : 'assets/videos/jugador01.mp4'">
-    </app-media>
-  </div>
-
   <p *ngIf="(players | filtroPlayers:filtroNombre:filtroPosicion:filtroEdadMin).length === 0" class="text-center mt-4">
     No se han encontrado jugadores con ese filtro.
   </p>
