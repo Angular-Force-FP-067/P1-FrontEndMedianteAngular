@@ -1,0 +1,36 @@
+<div *ngIf="jugador">
+  <div class="card shadow-sm mb-3" style="max-width: 22rem; margin: 0 auto;">
+    <img [src]="jugador.imagen" class="card-img-top" [alt]="jugador.nombre"
+         style="height: 250px; object-fit: cover;">
+
+    <div class="card-body text-center">
+      <h5 class="card-title text-uppercase fw-bold">
+        {{ jugador.nombre }} {{ jugador.apellidos }}
+      </h5>
+      <p class="badge bg-primary mb-2">{{ jugador.posicion }}</p>
+
+      <ul class="list-group list-group-flush text-start mb-3">
+        <li class="list-group-item small"><strong>País:</strong> {{ jugador.pais }}</li>
+        <li class="list-group-item small"><strong>Edad:</strong> {{ jugador.edad }} años</li>
+        <li class="list-group-item small"><strong>Altura:</strong> {{ alturaFormateada || jugador.altura + ' m' }}</li>
+        <li class="list-group-item small"><strong>Peso:</strong> {{ jugador.peso }} kg</li>
+      </ul>
+
+      <div class="player-stats d-flex justify-content-around small">
+        <div><strong>{{ jugador.PPP }}</strong><br/>PPP</div>
+        <div><strong>{{ jugador.APP }}</strong><br/>APP</div>
+        <div><strong>{{ jugador.RPP }}</strong><br/>RPP</div>
+      </div>
+    </div>
+  </div>
+
+  <div *ngIf="jugador.biografia" class="mb-3">
+    <h6>Biografía</h6>
+    <p class="small text-muted">{{ jugador.biografia }}</p>
+  </div>
+
+</div>
+
+<div *ngIf="!jugador" class="alert alert-info">
+  Selecciona un jugador para ver sus detalles.
+</div>
