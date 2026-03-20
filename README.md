@@ -1,59 +1,67 @@
-# EquipoBasket
+# 🏀 EquipoBasket
 
-This project was generated using [Angular CLI](https://github.com/angular/angular-cli) version 21.2.0.
+Proyecto desarrollado con Angular CLI (v21.2.0) para la gestión y visualización de un equipo de baloncesto.
 
-## Development server
+## Equipo
 
-To start a local development server, run:
+Cèlia Trullà Estruch
 
-```bash
-ng serve
-```
+Xavi Miró Carrera
 
-Once the server is running, open your browser and navigate to `http://localhost:4200/`. The application will automatically reload whenever you modify any of the source files.
+Sergio Gómez Gutiérrez
 
-## Code scaffolding
+Helena Vivas Ramajo
 
-Angular CLI includes powerful code scaffolding tools. To generate a new component, run:
+## Ramas del repositorio
 
-```bash
-ng generate component component-name
-```
+Este proyecto utiliza dos ramas principales según el entorno de ejecución:
 
-For a complete list of available schematics (such as `components`, `directives`, or `pipes`), run:
+> main → Desarrollo en entorno local
 
-```bash
-ng generate --help
-```
+> codesandbox → Configuración adaptada para ejecución en CodeSandbox
 
-## Building
+## Servidor de desarrollo (Local)
 
-To build the project run:
+Para ejecutar el proyecto en local:
 
-```bash
-ng build
-```
+```ng serve```
 
-This will compile your project and store the build artifacts in the `dist/` directory. By default, the production build optimizes your application for performance and speed.
+Abrir en el navegador:
 
-## Running unit tests
+http://localhost:4200/
 
-To execute unit tests with the [Vitest](https://vitest.dev/) test runner, use the following command:
+## Ejecución en CodeSandbox
 
-```bash
-ng test
-```
+Para ejecutar el proyecto en CodeSandbox:
 
-## Running end-to-end tests
+Cambiar a la rama codesandbox
 
-For end-to-end (e2e) testing, run:
+```git checkout codesandbox```
 
-```bash
-ng e2e
-```
+Instalar dependencias:
 
-Angular CLI does not come with an end-to-end testing framework by default. You can choose one that suits your needs.
+``` npm install ```
 
-## Additional Resources
+Iniciar el servidor:
 
-For more information on using the Angular CLI, including detailed command references, visit the [Angular CLI Overview and Command Reference](https://angular.dev/tools/cli) page.
+```npm start ```
+
+Esta rama está configurada para funcionar en entornos online con:
+
+```ng serve --host 0.0.0.0 --disable-host-check ```
+
+CodeSandbox generará automáticamente una URL pública tipo:
+
+https://xxxxx-4200.csb.app
+
+## Notas
+
+La rama codesandbox incluye ajustes necesarios para que Angular funcione correctamente en entornos online.
+
+La rama main debe utilizarse para el desarrollo local.
+
+El proyecto está preparado para ser compartido y evaluado mediante CodeSandbox.
+
+## Recursos adicionales
+
+[Documentación oficial de Angular CLI](https://angular.dev/tools/cli)
